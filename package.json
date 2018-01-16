@@ -1,0 +1,14 @@
+{
+  "name": "docker-verdaccio-gitlab",
+  "version": "1.0.0",
+  "description": "Docker Container for verdaccio with gitlab authentication",
+  "main": "configure.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.10.0",
+    "rc": "^1.2.3",
+    "verdaccio": "^2.7.3",
+    "verdaccio-gitlab": "0.0.4"
+  }
+}

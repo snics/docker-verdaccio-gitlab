@@ -1,0 +1,42 @@
+# path to a directory with all packages
+storage: ./storage
+
+web:
+  enable: true
+  title: Verdaccio - NPM registry
+  logo: logo.png
+
+# a list of other known repositories we can talk to
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+
+auth:
+  gitlab:
+    url: https://gitlab.com
+  htpasswd:
+    file: htpasswd
+    max_users: -1
+
+packages:
+   # scoped packages
+   '@*/*':
+     access: $all
+     publish: $authenticated
+     proxy: npmjs
+     gitlab: true
+     htpasswd: true
+
+   '**':
+     access: $all
+     publish: $authenticated
+     proxy: npmjs
+     gitlab: true
+     htpasswd: true
+
+# log settings
+logs:
+  - {type: stdout, format: pretty, level: http}
+
+listen:
+  - 0.0.0.0:4873
