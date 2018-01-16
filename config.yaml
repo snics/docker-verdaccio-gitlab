@@ -22,14 +22,12 @@ packages:
      publish: $authenticated
      proxy: npmjs
      gitlab: true
-     htpasswd: true
 
    '**':
      access: $all
      publish: $authenticated
      proxy: npmjs
      gitlab: true
-     htpasswd: true
 
 # log settings
 logs:
