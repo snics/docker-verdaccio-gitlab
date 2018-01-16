@@ -14,9 +14,6 @@ uplinks:
 auth:
   gitlab:
     url: https://gitlab.com
-  htpasswd:
-    file: htpasswd
-    max_users: -1
 
 packages:
    # scoped packages
